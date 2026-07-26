@@ -63,7 +63,7 @@ Servers in the private subnets receive traffic only through the Application Load
 ![Internet Gateway](internet-gateway.png)
 
 ### 4. NAT Gateway
-![NAT Gateway](nat-gateway.png)
+![NAT Gateway](NAT-gateway.png)
 
 ### 5. Route Tables
 ![Route Tables](route-tables.png)
