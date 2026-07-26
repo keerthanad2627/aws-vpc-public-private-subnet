@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project demonstrates a highly available and secure AWS infrastructure deployed across two Availability Zones (AZs). The architecture uses both public and private subnets. Public subnets host the Application Load Balancer (ALB) and NAT Gateways, while private subnets host the EC2 application servers. The EC2 instances are managed by an Auto Scaling Group (ASG) to ensure high availability and automatic scaling based on demand.
+This project demonstrates a highly available and secure AWS infrastructure deployed across two Availability Zones. The architecture uses both public and private subnets. Public subnets host the Application Load Balancer (ALB) and NAT Gateways, while private subnets host the EC2 application servers. The EC2 instances are managed by an Auto Scaling Group (ASG) to ensure high availability and automatic scaling based on demand.
 
-Traffic from users reaches the Application Load Balancer, which distributes requests to EC2 instances in the private subnets. The EC2 instances securely access the internet through the NAT Gateway. An Amazon S3 Gateway Endpoint enables private connectivity to Amazon S3 without using the public internet.
+Servers in the private subnets receive traffic only through the Application Load Balancer and access the internet securely using the NAT Gateway. An Amazon S3 Gateway Endpoint enables private access to Amazon S3 without traversing the public internet.
 
 ---
 
@@ -33,29 +33,55 @@ Traffic from users reaches the Application Load Balancer, which distributes requ
 
 ## Implementation Steps
 
-1. Created a VPC with a custom CIDR block.
-2. Created two public subnets and two private subnets across two Availability Zones.
-3. Attached an Internet Gateway to the VPC.
-4. Configured public and private route tables.
-5. Associated subnets with their respective route tables.
-6. Allocated Elastic IPs and created NAT Gateways in the public subnets.
-7. Added default routes from private subnets to the NAT Gateways.
-8. Created an Amazon S3 Gateway Endpoint and associated it with the private route tables.
-9. Created Security Groups for the Load Balancer and EC2 instances.
-10. Launched an EC2 instance and installed the web application.
-11. Created an AMI from the configured EC2 instance.
-12. Created a Launch Template using the AMI.
-13. Created an Auto Scaling Group across both private subnets.
-14. Created an Application Load Balancer in the public subnets.
-15. Configured a Target Group and attached the Auto Scaling Group.
-16. Verified application access using the Load Balancer DNS name.
-17. Tested Auto Scaling and High Availability by stopping an EC2 instance and verifying automatic replacement.
+1. Create a VPC with a custom CIDR block.
+2. Create two public subnets and two private subnets across two Availability Zones.
+3. Attach an Internet Gateway to the VPC.
+4. Configure public and private route tables.
+5. Associate the subnets with their respective route tables.
+6. Create NAT Gateways in the public subnets.
+7. Add default routes from private subnets to the NAT Gateways.
+8. Create an Amazon S3 Gateway Endpoint.
+9. Configure Security Groups.
+10. Launch EC2 instances.
+11. Create an AMI and Launch Template.
+12. Configure an Auto Scaling Group.
+13. Create an Application Load Balancer.
+14. Configure the Target Group.
+15. Test High Availability and Auto Scaling.
 
 ---
 
 ## Project Screenshots
 
-Project screenshots are available in the **screenshots** folder.
+### 1. VPC
+![VPC](vpc.png)
+
+### 2. Subnets
+![Subnets](subnets.png)
+
+### 3. Internet Gateway
+![Internet Gateway](internet-gateway.png)
+
+### 4. NAT Gateway
+![NAT Gateway](nat-gateway.png)
+
+### 5. Route Tables
+![Route Tables](route-tables.png)
+
+### 6. Security Groups
+![Security Groups](security-groups.png)
+
+### 7. EC2 Instance
+![EC2 Instance](ec2.png)
+
+### 8. Application Load Balancer
+![Application Load Balancer](load-balancer.png)
+
+### 9. Auto Scaling Group
+![Auto Scaling Group](auto scaling group.png)
+
+### 10. HTML Web Page
+![HTML Web Page](html.png)
 
 ---
 
@@ -65,11 +91,11 @@ After completing this project, I was able to:
 
 - Design a secure AWS network using Amazon VPC.
 - Configure public and private subnets.
-- Understand the purpose of Internet Gateway and NAT Gateway.
+- Understand Internet Gateway and NAT Gateway.
 - Deploy EC2 instances in private subnets.
-- Configure an Application Load Balancer for traffic distribution.
+- Configure an Application Load Balancer.
 - Implement Auto Scaling for high availability.
 - Configure Security Groups and Route Tables.
 - Enable private access to Amazon S3 using a Gateway Endpoint.
 - Build a production-style, highly available AWS architecture.
-- Gain practical hands-on experience with AWS networking and services.
+- Gain practical hands-on experience with AWS networking and compute services.
