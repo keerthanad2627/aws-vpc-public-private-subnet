@@ -71,16 +71,7 @@ Servers in the private subnets receive traffic only through the Application Load
 ### 6. Security Groups
 ![Security Groups](security-groups.png)
 
-### 7. EC2 Instance
-![EC2 Instance](ec2.png)
-
-### 8. Application Load Balancer
-![Application Load Balancer](load-balancer.png)
-
-### 9.auto scaling
-![Auto Scaling Group](auto scaling group.png)
-
-### 9. HTML Web Page
+### 7. HTML Web Page
 ![HTML Web Page](html.png)
 
 ---
