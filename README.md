@@ -77,10 +77,7 @@ Servers in the private subnets receive traffic only through the Application Load
 ### 8. Application Load Balancer
 ![Application Load Balancer](load-balancer.png)
 
-### 9. Auto Scaling Group
-![Auto Scaling Group](auto scaling group.png)
-
-### 10. HTML Web Page
+### 9. HTML Web Page
 ![HTML Web Page](html.png)
 
 ---
