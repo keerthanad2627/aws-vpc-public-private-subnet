@@ -68,10 +68,7 @@ Servers in the private subnets receive traffic only through the Application Load
 ### 5. Route Tables
 ![Route Tables](route-tables.png)
 
-### 6. Security Groups
-![Security Groups](security-groups.png)
-
-### 7. HTML Web Page
+### 6. HTML Web Page
 ![HTML Web Page](html.png)
 
 ---
